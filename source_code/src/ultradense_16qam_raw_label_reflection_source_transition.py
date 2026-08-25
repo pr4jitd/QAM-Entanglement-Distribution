@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import csv
 import os
-import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -26,10 +25,6 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
-
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "src"))
-sys.path.insert(0, str(ROOT / "drivers"))
 
 from raw_label_reflection_source_loss_srm import (
     LOCAL_FIELDS,

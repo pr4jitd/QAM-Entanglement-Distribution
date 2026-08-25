@@ -15,6 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = [
+    "VERSION",
     "data/raw/ideal_channel_srm/raw_label_vs_vacuum_omit_srm_all_data.csv",
     "data/raw/ideal_channel_srm/qam32_raw_label_vs_vacuum_merged.csv",
     "data/raw/d_sweep/raw_label_srm_qam_branch_sweep_points.csv",
@@ -23,6 +24,10 @@ REQUIRED_FILES = [
     "data/raw/phase_error/interface_0p2db/raw_label_phase_error_summary.csv",
     "data/raw/optimized_povm/qam4_selected_32outcome_povm_comparison.csv",
     "data/raw/optimized_povm/best_M4_loss_0.25_scale_0p93_outcomes_32.npz",
+    "source_code/src/mpsk_ghz_hashing.py",
+    "source_code/src/qam_hashing.py",
+    "source_code/src/compare_schmidt_bell_povm_qam.py",
+    "source_code/src/optimize_qam4_general_povm.py",
     "source_code/src/qam_source_loss_hashing.py",
     "source_code/src/qam_reflection_source_loss_hashing.py",
 ]

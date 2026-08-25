@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import sys
 from pathlib import Path
 
 os.environ.setdefault("MPLCONFIGDIR", str(Path.cwd() / ".matplotlib"))
@@ -25,6 +26,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import scipy.optimize
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 
 import optimize_qam4_general_povm as opt
 from mpsk_ghz_hashing import entropy_bits, sparse_measurement_coefficients

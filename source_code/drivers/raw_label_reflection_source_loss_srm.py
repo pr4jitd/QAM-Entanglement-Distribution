@@ -12,6 +12,7 @@ import argparse
 import csv
 import math
 import os
+import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
@@ -34,6 +35,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 import scipy.optimize
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 
 from qam_reflection_source_loss_hashing import DISPLAY_NAMES, EvalPoint, evaluate_reflection_srm
 
